@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .wrong {
+        @apply text-lg border bg-red-700 hover:bg-red-400 text-white font-semibold pl-2 py-2;
+    }
+    .correct {
+        @apply text-lg border bg-green-700 hover:bg-green-500 text-white font-semibold pl-2 py-2;
+    }
+    .select {
+        @apply text-lg  border-[3px] bg-yellow-400 border-yellow-500 active:bg-slate-900   font-semibold pl-2 py-2;
+    }
+    .defaults {
+        @apply text-lg border-[3px] bg-slate-200 cursor-pointer font-mono  hover:bg-gray-600 hover:text-white active:bg-slate-900 py-2  font-semibold pl-2;
+    }
+}
