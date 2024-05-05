@@ -54,7 +54,7 @@ const CreateQuiz = () => {
     <div className="">
      { !submitData?
       <div>
-     ({!submitQuizAttempt ? (
+     {!submitQuizAttempt ? (
         <QuizForm quizDataPass={handleReceiveQuizData} />
       ) : (
         <div>

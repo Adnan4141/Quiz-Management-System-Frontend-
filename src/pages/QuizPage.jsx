@@ -29,7 +29,7 @@ const QuizPage = () => {
   useEffect(() => {
     const startTime = new Date();
     setTimeStart(startTime);
-
+      console.log(startTime.getTime())
     const fetchData = async () => {
       setLoading(true);
       try {
@@ -104,7 +104,6 @@ const QuizPage = () => {
 
 
 
-
   // Function to handle submission of user responses
   const handleSubmit = async () => {
    
@@ -112,7 +111,8 @@ const QuizPage = () => {
     const completionTimestamp = Math.round(timeStart ? (Endtime - timeStart) / 1000 : 0);
     console.log("total timespend is:" + completionTimestamp);  
     const quizScoreObj = calculateScore(userResponses, questionsData);
-    
+     
+   
         
     const ParticipantInfo = {
       name: currentUser.name,
@@ -120,6 +120,9 @@ const QuizPage = () => {
       userUid:currentUser.userUid,
       quizId: id,
       metricId,
+      startTime:timeStart.getTime(),
+      endTime:Endtime.getTime(),
+      date:new Date().toLocaleDateString(),
       ...quizScoreObj,
       completionTimestamp,
       userResponses
