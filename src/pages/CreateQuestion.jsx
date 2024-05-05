@@ -78,6 +78,25 @@ const CreateQuestion = ({ dataPass, index,quizData }) => {
       <form action="" onSubmit={hanldleSubmit} className="w-full">
         <div className="my-3 w-full flex flex-col items-center justify-center">
           <div className="w-[60%]  space-y-4">
+            
+          <div className="mb-3">
+          <label
+            htmlFor="title"
+            className="text-base text-navy-700 dark:text-white font-bold"
+          >
+           Quiz Title
+          </label>
+          <input
+            type="text"
+                name="text"
+                value={questionFormData.text}
+                onChange={handleInputChange}
+                placeholder="Enter question"
+              required
+            className="mt-2 flex h-12 font-mono  w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-gray-200"
+          />
+        </div>
+
             <div className="w-full">
               <input
                 className="border w-full py-2 text-lg pl-2"
@@ -95,7 +114,7 @@ const CreateQuestion = ({ dataPass, index,quizData }) => {
                 className="border w-full py-2 text-lg pl-2"
                 type="text"
                 name="options"
-                // value={questionFormData.newOption}
+                value={newOption}
                 onChange={handleOptionChange}
                 placeholder="Options"
               />
