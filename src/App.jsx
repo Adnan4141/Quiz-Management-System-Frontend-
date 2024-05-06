@@ -12,15 +12,25 @@ import QuizPage from "./pages/QuizPage";
 
 import QuizDetails from "./pages/QuizDetails";
 import ResultPage from "./pages/ResultPage";
+import ContactUs from "./pages/ContactUs";
+import Timeline from "./pages/Timeline";
 
 const App = () => {
+  
+
+
+
+
   return (
     <BrowserRouter>
+     <div className="">
       <Navbar />
-      <Routes>
+     <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/timeline" element={<Timeline />} />
 
         <Route
           path="/quiz-page/:id"
@@ -84,6 +94,7 @@ const App = () => {
     
         <Route path="*" element={<NotFound />} />
       </Routes>
+     </div>
     </BrowserRouter>
   );
 };

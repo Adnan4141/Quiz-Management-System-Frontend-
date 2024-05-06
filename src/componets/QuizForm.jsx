@@ -23,10 +23,10 @@ const QuizForm = ({ quizDataPass }) => {
   };
 
   return (
-   <div className="max-w-6xl mx-auto flex justify-center items-center -mt-20">
+   <div className="w-full md:max-w-7xl  mx-auto flex justify-center items-center -mt-20">
      <div className="flex flex-col justify-center items-center h-screen">
      <form onSubmit={handleSubmit}
-      className="z-5 relative  rounded-20 max-w-300 md:max-w-400  bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full p-6 3xl:p-[18px] bg-white" 
+      className="z-5 relative  rounded-20 max-w-300 md:max-w-500  bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full p-6 3xl:p-[18px] bg-white" 
      action="">
     
         <div className="relative flex flex-row justify-center">
@@ -48,9 +48,11 @@ const QuizForm = ({ quizDataPass }) => {
               onChange={handleInputChange}
               placeholder="Enter quiz title"
               required
-            className="mt-2 flex h-12 font-mono  w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-gray-200"
+            className="mt-2 flex h-14 font-mono  w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-gray-200"
           />
         </div>
+
+
         <div className="mb-3">
           <label
             htmlFor="questionLength"
@@ -67,9 +69,10 @@ const QuizForm = ({ quizDataPass }) => {
               min={1}
               required
               placeholder="Enter Number of Question"
-            className="mt-2 flex h-12 w-full font-serif placeholder:font-sans  placeholder:text-sm items-center justify-center rounded-xl border bg-white/0 p-3 text-lg outline-none border-green-500 text-green-500 placeholder:text-green-500 dark:!border-green-400 dark:!text-green-400 dark:placeholder:!text-green-400"
+            className="mt-2 flex h-14 w-full font-serif placeholder:font-sans  placeholder:text-sm items-center justify-center rounded-xl border bg-white/0 p-3 text-lg outline-none border-green-500 text-green-500 placeholder:text-green-500 dark:!border-green-400 dark:!text-green-400 dark:placeholder:!text-green-400"
           />
         </div>
+        
         <div className="mb-3">
           <label
             htmlFor="timeLimit"
@@ -86,7 +89,7 @@ const QuizForm = ({ quizDataPass }) => {
                 required
               onChange={handleInputChange}
               placeholder="Enter quiz Duration"
-            className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-red-500 text-red-500 placeholder:text-red-500 dark:!border-red-400 dark:!text-red-400 dark:placeholder:!text-red-400"
+            className="mt-2 flex h-14 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-purple-600 text-purple-600 placeholder:text-purple-600 dark:!border-purple-400 dark:!text-purple-400 dark:placeholder:!text-purple-400"
           />
         </div>
         <button className="bg-indigo-900 rounded-lg shadow text-center text-white text-base font-semibold w-full py-3 mt-9">Create Quiz</button>

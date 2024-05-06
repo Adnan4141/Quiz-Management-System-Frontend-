@@ -41,6 +41,7 @@ const CreateQuiz = () => {
       console.log(user.userUid)
       const obj = {
         ...quizData,
+        timeLimit:quizData.timeLimit*60,
         CreateBy:user.userUid,
         questions: data.questionIds,
       };
@@ -63,11 +64,9 @@ const CreateQuiz = () => {
             dataPass={handleReceiveQuestionData}
             quizData={quizData}
           />
-          <div className="flex items-center justify-center w-full">
-            <button className="px-5 py-3 ">Save</button>
-          </div>
+         
         </div>
-      )})
+      )}
      </div>:
      //after submit the quiz this component will
      <div className="flex items-center justify-center border border-black w-full h-[80vh] bg-gradient-to-tr from-gray-400  to-gray-500">
