@@ -1,11 +1,11 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import QuizHeader from "../componets/QuizHeader";
+import QuizHeader from "../components/QuizHeader";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import Loader from "../componets/Loader";
+import Loader from "../components/Loader";
 import { fetchQuizById, submitQuizAttemptForQuizzes } from "../feature/quiz/quizFetch";
-import { ProgressBar } from "../componets/ProgressBar";
+import { ProgressBar } from "../components/ProgressBar";
 import { useSelector } from "react-redux";
 import { submitQuizForParticipant } from "../feature/participant/participantFetch";
 

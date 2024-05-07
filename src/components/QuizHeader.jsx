@@ -66,7 +66,7 @@ const QuizHeader = ({ timer,handleTimeout,passTime,questionsData}) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <span className="text-red-700">Attention!</span> You have {timer} seconds to answer {questionsData.length} questions.
+            <span className="text-red-700">Attention!</span> You have {formatTime(timer)} minutes to answer {questionsData.length} questions.
             <br />
             Please keep an eye on the timer and make sure to answer all questions before time runs out.
           </motion.div>

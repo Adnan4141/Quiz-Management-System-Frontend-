@@ -11,6 +11,10 @@ const CreateQuestion = ({ dataPass, index, quizData }) => {
   const navigate = useNavigate();
   const quizLength = Number(quizData.questionLength);
 
+
+
+
+
   const handleAddOption = (e) => {
     e.preventDefault();
     setOptions([...options, newOption]);
@@ -68,7 +72,7 @@ const CreateQuestion = ({ dataPass, index, quizData }) => {
       options: [],
     });
     if (index == quizLength - 1) {
-      //  navigate("/")
+       navigate("/")
     }
   };
 
@@ -146,17 +150,7 @@ const CreateQuestion = ({ dataPass, index, quizData }) => {
               </div>
           ) }
 
-            {/* <div className=" flex flex-col gap-2">
-              <input
-                className="border w-full py-2 text-lg pl-2"
-                type="text"
-                name="options"
-                value={newOption}
-                onChange={handleOptionChange}
-                placeholder="Options"
-              />
-             
-            </div> */}
+       
 
             <div className="mb-2">
               <label
@@ -172,7 +166,7 @@ const CreateQuestion = ({ dataPass, index, quizData }) => {
                 onChange={handleInputChange}
                 min={1}
                 placeholder="Enter Answer number this question"
-                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-red-500 text-red-500 placeholder:text-red-500 dark:!border-red-400 dark:!text-red-400 dark:placeholder:!text-red-400"
+                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-purple-600 text-purple-800 placeholder:bg-purple-800 dark:!bg-purple-800 dark:!text-red-400 dark:placeholder:!text-red-400"
               />
             </div>
 

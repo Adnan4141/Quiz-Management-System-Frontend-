@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { BaseUrl } from "../../app/api";
 
 
 
@@ -10,8 +11,8 @@ export const fetchQuizData = createAsyncThunk(
     async (userUid) => {
       console.log(userUid)
       try {
-        const response = await axios.get(`http://localhost:3000/quizzes/userUid/${userUid}`);
-        //  console.log(response.data)
+        const response = await axios.get(`${BaseUrl}/quizzes/userUid/${userUid}`);
+         console.log(response.data)
         return response.data;
       } catch (error) {
          console.log(error.message)
@@ -21,7 +22,7 @@ export const fetchQuizData = createAsyncThunk(
 
   export const deleteQuizById =  async (quizId) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/quizzes/${quizId}`);
+      const response = await axios.delete(`${BaseUrl}/quizzes/${quizId}`);
        console.log(response.data)
       return response.data; 
       // The response should contain a success message

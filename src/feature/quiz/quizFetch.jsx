@@ -1,6 +1,7 @@
 // actions.js
 
 import axios from "axios";
+import { BaseUrl } from "../../app/api";
 
 
 
@@ -9,7 +10,7 @@ import axios from "axios";
 export const createQuizAndSendServer = async(obj) => {
     try {
        console.log(obj)
-      const response = await axios.post('http://localhost:3000/quizzes',obj);
+      const response = await axios.post(`${BaseUrl}/quizzes`,obj);
       console.log(response)
       console.log('Question created:', response.data);
       // Call dataPass or handle the response as needed
@@ -27,7 +28,7 @@ export const fetchQuizById = async(id) => {
  
       console.log(id)
         try {
-            const response = await fetch(`http://localhost:3000/quizzes/${id}`);
+            const response = await fetch(`${BaseUrl}/quizzes/${id}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch data');
             }
@@ -45,7 +46,7 @@ export const fetchQuizById = async(id) => {
 // Function to delete a participant from quiz participant history
 export const deleteParticipant = async (quizId, participantId) => {
   try {
-    const response = await axios.delete(`http://localhost:3000/quizzes/${quizId}/participant/${participantId}`);
+    const response = await axios.delete(`${BaseUrl}/quizzes/${quizId}/participant/${participantId}`);
     return response.data; // Return the response data if successful
   } catch (error) {
     throw error.response.data; // Throw an error if request fails
@@ -60,7 +61,7 @@ export const deleteParticipant = async (quizId, participantId) => {
 export const submitQuizAttemptForQuizzes = async(userInfo)=>{
         console.log(userInfo)
      
-    const url = `http://localhost:3000/quizzes/${userInfo.quizId}`; // Replace with your server-side URL
+    const url = `${BaseUrl}/quizzes/${userInfo.quizId}`; // Replace with your server-side URL
     try {
       const response = await axios.put(url, userInfo, {
         headers: { 'Content-Type': 'application/json' },

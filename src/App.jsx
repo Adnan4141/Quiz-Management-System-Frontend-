@@ -4,12 +4,11 @@ import Navbar from "./shared/Navbar";
 import QuizDashboard from "./pages/QuizDashboard";
 import SigninPage from "./pages/SigninPage";
 import SignupPage from "./pages/SignupPage";
-import PrivateRoute from "./componets/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute";
 import NotFound from "./pages/NotFound";
 import CreateQuiz from "./pages/CreateQuiz";
 import QuizMain from "./pages/QuizMain";
 import QuizPage from "./pages/QuizPage";
-
 import QuizDetails from "./pages/QuizDetails";
 import ResultPage from "./pages/ResultPage";
 import ContactUs from "./pages/ContactUs";
@@ -17,8 +16,6 @@ import Timeline from "./pages/Timeline";
 
 const App = () => {
   
-
-
 
 
   return (

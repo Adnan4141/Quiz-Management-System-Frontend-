@@ -1,9 +1,8 @@
 import { BiUpArrowAlt } from "react-icons/bi";
-import { FaRegClipboard } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 import { deleteParticipant, fetchQuizById } from "../feature/quiz/quizFetch";
 import { useEffect, useState } from "react";
-import Loader from "../componets/Loader";
+import Loader from "../components/Loader";
 
 const QuizDetails = () => {
   const [quiz, setQuiz] = useState(null);

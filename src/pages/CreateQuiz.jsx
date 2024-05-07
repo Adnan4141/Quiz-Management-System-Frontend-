@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CreateQuestion from "./CreateQuestion";
 import { useSelector } from "react-redux";
-import QuizForm from "../componets/QuizForm";
+import QuizForm from "../components/QuizForm";
 import { sendManyQuestionToServer } from "../feature/question/questionFetch";
 import { createQuizAndSendServer } from "../feature/quiz/quizFetch";
 import { Link } from "react-router-dom";

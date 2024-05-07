@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BaseUrl } from "../../app/api";
 
 
 
@@ -7,7 +8,7 @@ export async function createParticipant(participantData) {
     alert("post")
    console.log(participantData)
   try {
-    const response = await axios.post('http://localhost:3000/participants', participantData);
+    const response = await axios.post(`${BaseUrl}/participants`, participantData);
     
     if (response.status === 201) {
       const savedParticipant = response.data;

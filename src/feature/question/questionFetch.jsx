@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BaseUrl } from "../../app/api";
 
 
 
@@ -18,7 +19,7 @@ export const sendOneQuestionToServer = async () => {
           }
       
         console.log(demo)
-      const response = await axios.post('http://localhost:3000/questions', demo);
+      const response = await axios.post(`${BaseUrl}/questions`, demo);
       console.log(response)
       console.log('Question created:', response.data);
 
@@ -33,7 +34,7 @@ export const sendManyQuestionToServer = async (objArray) => {
     try {
 
         console.log(objArray)
-      const response = await axios.post('http://localhost:3000/questions/all', objArray);
+      const response = await axios.post(`${BaseUrl}/questions/all`, objArray);
       console.log('Question created:', response.data);
       return response.data
       // Call dataPass or handle the response as needed

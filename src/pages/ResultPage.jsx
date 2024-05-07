@@ -6,17 +6,17 @@ import { BiTimeFive } from "react-icons/bi";
 // ResultPage.js
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Loader from "../componets/Loader";
-import CircularProgress from "../componets/CircularProgress";
+import Loader from "../components/Loader";
+import CircularProgress from "../components/CircularProgress";
 import { VscPass } from "react-icons/vsc";
-import { ProgressBar } from "./../componets/ProgressBar";
 import { useParams } from "react-router-dom";
 import { fetchQuizById } from "../feature/quiz/quizFetch";
+import { BaseUrl } from "../app/api";
 
 const ResultPage = ({ quizId }) => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [score, setScore] = useState(0);
+
   const [Preview, setPreview] = useState(false);
   const [participantHistory, setParticipantHistory] = useState([]);
   const [participant, setParticipant] = useState([]);
@@ -30,7 +30,7 @@ const ResultPage = ({ quizId }) => {
   useEffect(() => {
     const fetchParticipantHistory = async () => {
       try {
-        const url = `http://localhost:3000/participants/${userUid}/quizId/${quizzesId}`;
+        const url = `${BaseUrl}/participants/${userUid}/quizId/${quizzesId}`;
         const response = await axios.get(url);
         setLoading(false);
         console.log(response.data);
