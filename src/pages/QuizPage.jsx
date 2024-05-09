@@ -8,6 +8,7 @@ import { fetchQuizById, submitQuizAttemptForQuizzes } from "../feature/quiz/quiz
 import { ProgressBar } from "../components/ProgressBar";
 import { useSelector } from "react-redux";
 import { submitQuizForParticipant } from "../feature/participant/participantFetch";
+import NotAvailable from "../components/NotAvailable";
 
 
 const QuizPage = () => {
@@ -282,8 +283,16 @@ return (
     )
  else{
   return (
-  <div className="text-5xl my-20 text-red-400 flex justify-center items-center">
+  <div className="text-5xl font-mono  my-20 text-bl flex flex-col justify-center items-center">
     No Available Quiz
+    <div className="mx-auto w-full">
+          
+            <div className=" flex justify-center ">
+            <img className="w-[620px]  h-[520px]"
+            src="/images/noAvailabel2.jpg" alt="not available " />
+            </div>
+        </div>
+    
  </div>
  )
  }

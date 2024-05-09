@@ -39,12 +39,12 @@ export const fetchQuizData = createAsyncThunk(
 
 const initialState = {
     quiz: [],
-    quizData: {
-      title: "",
-      questionLength: "",
-      timeLimit: "",
-      userId: ""
-    },
+    // quizData: {
+    //   title: "",
+    //   questionLength: "",
+    //   timeLimit: "",
+    //   userId: ""
+    // },
     quizCreate: false,
     loading: false, // Add loading state to track fetching status
     error: null,   // Add error state to handle errors

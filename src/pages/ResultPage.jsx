@@ -241,7 +241,7 @@ const ResultPage = ({ quizId }) => {
               <p className="text-xl font-mono my-1 text-gray-900">
                 {question.text} {/* Replace dynamic content with static */}
               </p>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid md:grid-cols-2 gap-2">
                 {questions[index].options.map((option, indx) => (
                   <div
                     className={`${
@@ -259,7 +259,7 @@ const ResultPage = ({ quizId }) => {
                   </div>
                 ))}
               </div>
-              <p className="text-xl font-serif my-1">Explanation</p>
+              {/* <p className="text-xl font-serif my-1">Explanation</p> */}
             </div>
           ))}
       </div>

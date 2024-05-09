@@ -1,7 +1,6 @@
 import { AiOutlineClose } from "react-icons/ai";
 
 import { CiMenuFries } from "react-icons/ci";
-import { AiOutlineMenu } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { signOutSuccess } from "../feature/participant/participantSlice";
@@ -10,9 +9,14 @@ import { auth } from "../fierbase/firebase";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+
+
+
 const Navbar = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+
+
 
   const handleSignOut = () => {
     console.log("object");
@@ -21,7 +25,7 @@ const Navbar = () => {
   };
 
   const user = useSelector((state) => state.User.currentUser);
-
+ console.log(user)
   // State for sticky navbar behavior
   const [isSticky, setIsSticky] = useState(false);
 
@@ -41,11 +45,11 @@ const Navbar = () => {
     <div
       className={`flex bg-white  justify-between items-center py-5 px-5 relative ${
         isSticky ? "sticky top-0 z-50" : ""
-      }`} // Apply sticky classes conditionally
+      }`} 
     >
       <div className="">
         <Link to="/">
-          <img src="/src/assets/image/logoQuiz.png" alt="" />
+          <img src='/images/logoQuiz.png' alt="Brand-logo" />
         </Link>
       </div>
 
@@ -77,7 +81,7 @@ const Navbar = () => {
             <img
               className="w-10 h-10 rounded-full"
               src={user?.photoURL}
-              alt=""
+              alt="userLogo"
             />
             <p className="text-sm font-serif">{user?.name}</p>
           </div>

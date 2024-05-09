@@ -5,6 +5,8 @@ import QuizForm from "../components/QuizForm";
 import { sendManyQuestionToServer } from "../feature/question/questionFetch";
 import { createQuizAndSendServer } from "../feature/quiz/quizFetch";
 import { Link } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+
 
 const CreateQuiz = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -32,8 +34,8 @@ const CreateQuiz = () => {
     // console.log(quizData)
   
     if (index == quizData.questionLength- 1) {
-      alert("change page");
       const data = await sendManyQuestionToServer(updatedResponses);
+  
       // console.log(data )
       // console.log(data.questionIds  )
       // console.log(quizData)
@@ -91,6 +93,7 @@ const CreateQuiz = () => {
             </div>
         </div>
      }
+     
     </div>
   );
 };

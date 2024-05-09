@@ -76,6 +76,8 @@ const CreateQuestion = ({ dataPass, index, quizData }) => {
     }
   };
 
+
+
   return (
     <div className="h-[50rem] w-full flex flex-col  items-center mt-10">
       <div className="flex flex-col justify-center items-center gap-2">
@@ -165,8 +167,9 @@ const CreateQuestion = ({ dataPass, index, quizData }) => {
                 value={questionFormData.answer}
                 onChange={handleInputChange}
                 min={1}
+                max={options.length}
                 placeholder="Enter Answer number this question"
-                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-purple-600 text-purple-800 placeholder:bg-purple-800 dark:!bg-purple-800 dark:!text-red-400 dark:placeholder:!text-red-400"
+                className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-lg placeholder:text-sm outline-none border-purple-600 text-purple-800 placeholder:text-purple-800 dark:!bg-purple-800 dark:!text-red-400 dark:placeholder:!text-red-400"
               />
             </div>
 

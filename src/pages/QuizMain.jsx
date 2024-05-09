@@ -43,6 +43,7 @@ const QuizMain = () => {
             <input
               type="text"
               name="quizId"
+              required
               onChange={handleInputChange}
               placeholder="quizId"
               className="p-3 block w-full pl-10 drop-shadow-lg outline-none"
@@ -86,6 +87,7 @@ const QuizMain = () => {
             <input
               type="text"
               name="metricId"
+              required
               onChange={handleInputChange}
               placeholder="Enter your ID"
               className="p-3 block w-full pl-10 drop-shadow-lg outline-none"
@@ -122,7 +124,9 @@ const QuizMain = () => {
               </svg>
             </span>
           </div>
-          <label htmlFor="password" className="block">
+
+          {/* quiz password  start*/}
+          {/* <label htmlFor="password" className="block">
             Password
           </label>
           <div className="relative">
@@ -155,7 +159,10 @@ const QuizMain = () => {
                 </g>
               </svg>
             </span>
-          </div>
+          </div> */}
+      
+          {/* quiz password  end*/}
+           
         </div>
         {/* button type will be submit for handling form submission*/}
         <button

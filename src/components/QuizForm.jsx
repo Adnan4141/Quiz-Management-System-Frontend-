@@ -112,16 +112,7 @@ const QuizForm = ({ quizDataPass }) => {
      
      </form>
       
-      <p className="font-normal text-navy-700 mt-20 mx-auto w-max">
-        Notifications Card component from{" "}
-        <a
-          href="https://horizon-ui.com?ref=tailwindcomponents.com"
-          target="_blank"
-          className="text-brand-500 font-bold"
-        >
-          Horizon UI 
-        </a>
-      </p>
+      
     </div>
    </div>
 

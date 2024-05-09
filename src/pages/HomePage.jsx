@@ -27,7 +27,7 @@ const HomePage = () => {
       </div>
 
       <div className="h-full flex justify-center items-center">
-        <img src="/src/assets/image/banner.png" alt="" />
+        <img src="/images/banner.png" alt="bannerlogo" />
       </div>
     </div>
 
@@ -41,7 +41,7 @@ const HomePage = () => {
                   <div className="sm:flex-shrink-0">
                     <div className="flow-root">
                       <div className="border w-fit transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 inline-flex items-center justify-center px-3 py-0.5 text-sm font-medium leading-5 text-orange-600 bg-orange-100 rounded-full">
-                        Active User
+                        Questions
                       </div>
                       <p className="text-4xl font-bold text-gray-900">16K+</p>
                     </div>
@@ -51,7 +51,7 @@ const HomePage = () => {
                   <div className="sm:flex-shrink-0">
                     <div className="flow-root">
                       <div className="border w-fit transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 inline-flex items-center justify-center px-3 py-0.5 text-sm font-medium leading-5 text-orange-600 bg-orange-100 rounded-full">
-                        Episodes
+                        Quizzes
                       </div>
                       <p className="text-4xl font-bold ml-4 text-gray-900">28K+</p>
                     </div>
@@ -61,7 +61,7 @@ const HomePage = () => {
                   <div className="sm:flex-shrink-0">
                     <div className="flow-root">
                       <div className="border w-fit transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-primary/80 inline-flex items-center justify-center px-3 py-0.5 text-sm font-medium leading-5 text-orange-600 bg-orange-100 rounded-full">
-                        Series
+                        Active User
                       </div>
                       <p className="text-4xl font-bold ml-4 text-gray-900">18+</p>
                     </div>

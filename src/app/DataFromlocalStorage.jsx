@@ -2,10 +2,11 @@
 
 export const loadUserFromLocalStorage = () => {
     const currentUserString = JSON.parse(localStorage.getItem('currentUser'));
-    
+    console.log(currentUserString)
     if (currentUserString) {
       return currentUserString;
     }
+    
     return null;
   };
   
