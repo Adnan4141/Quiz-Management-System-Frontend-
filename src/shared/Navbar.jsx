@@ -71,6 +71,8 @@ const Navbar = () => {
         <Link to={"/contact-us"}>
           <li className="hover:text-yellow-500  font-serif">Contact Us</li>
         </Link>
+          <li onClick={handleSignOut} className=" hover:text-yellow-500 md:hidden font-serif">Log Out</li>
+ 
       </ul>
 
       <div className="flex cursor-pointer z-50  gap-2 md:gap-5 w-auto items-center ">

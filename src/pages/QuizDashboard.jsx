@@ -10,11 +10,10 @@ import NotAvailable from "../components/NotAvailable";
 const QuizDashboard = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.User.currentUser);
-
+ console.log(user.userUid)
   useEffect(() => {
-  
-    dispatch(fetchQuizData(user.uid));
-  }, [dispatch, user.uid]);
+    dispatch(fetchQuizData(user.userUid));
+  }, [dispatch, user.userUid]);
 
 
   const quizzes = useSelector((state) => state.quiz.quiz);
@@ -37,6 +36,7 @@ const QuizDashboard = () => {
   const handleDeleteByID = async (id) => {
     const result = await deleteQuizById(id);
     if (result) {
+    // [...quizzes]
       toast.success(result.message);
     }
   };

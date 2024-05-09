@@ -57,13 +57,14 @@ const SignupPage = () => {
                 "https://imgv3.fotor.com/images/blog-richtext-image/10-profile-picture-ideas-to-make-you-stand-out.jpg",
             });
           
-            // Signed up
+            // Sign up
             const demoUrl ="https://avatar.iran.liara.run/public/boy"
             const user = userCredential.user;
+            console.log(user)
             const userObj = {
-              ...formData,
-                 userUid:user.uid,
-                 photoURL:user.photoURL?user.photoURL:demoUrl,
+                ...formData,
+                userUid:user.uid,
+                photoURL:user.photoURL?user.photoURL:demoUrl,
             }
             dispatch(signInSuccess(userObj));
             createParticipant(userObj)
@@ -91,14 +92,15 @@ const signWithGoogleBtn = ()=>{
   const auth = getAuth();
   signInWithRedirect(auth, provider)
   .then((auth)=>
-  console.log(auth))
+  console.log(auth.currentUser))
+  console.log(auth)
  if(auth.currentUser){
   createParticipant({
     name:auth.currentUser.name,
     email:auth.currentUser.email,
     password:auth.currentUser.password?auth.currentUser.password:"",
     userUid:auth.currentUser.uid,
-    photo:auth.currentUser.photoURL?auth.currentUser.photoURL:"",
+    photoURL:auth.currentUser.photoURL?auth.currentUser.photoURL:"",
   })
   dispatch(signInSuccess(auth.currentUser))
  }

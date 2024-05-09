@@ -17,7 +17,9 @@ export const fetchQuizData = createAsyncThunk(
       } catch (error) {
          console.log(error.message)
       }
+      
     }
+      
   );
 
   export const deleteQuizById =  async (quizId) => {

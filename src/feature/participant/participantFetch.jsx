@@ -3,9 +3,9 @@ import { BaseUrl } from "../../app/api";
 
 
 
+
 // create a participants
 export async function createParticipant(participantData) {
-    alert("post")
    console.log(participantData)
   try {
     const response = await axios.post(`${BaseUrl}/participants`, participantData);
@@ -24,6 +24,23 @@ export async function createParticipant(participantData) {
     throw error;
   }
 }
+
+
+
+export const fetchUserDataById = async (userId) => {
+  console.log("userId :"+userId)
+  try {
+    const response = await axios.get(`${BaseUrl}/participants/${userId}`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+    throw new Error('Failed to fetch user data');
+  }
+};
+
+
+
+
 
 
   // get participant quiz  history

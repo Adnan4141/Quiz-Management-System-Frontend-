@@ -3,12 +3,15 @@ import {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signInSuccess } from "../feature/participant/participantSlice";
 import {  useNavigate } from "react-router-dom";
+import { fetchUserDataById } from "../feature/participant/participantFetch";
 
 
 
 
 
 const SigninPage = () => {
+
+
   const auth = getAuth();
   // const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
@@ -40,7 +43,7 @@ const SigninPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    if (formData.password != formData.password) {
+    if (!formData.password) {
       console.log("not sumit");
     } else {
       console.log("submit");
@@ -48,11 +51,12 @@ const SigninPage = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          dispatch(signInSuccess(user));
-          console.log(user);
+          fetchUserDataById(user.uid)
+          .then((userInfo)=>{
+            dispatch(signInSuccess(userInfo));
+            navigate("/dashboard");
+          })
           setFirebaseErr("");
-          navigate("/dashboard");
-          // ...
         })
         .catch((error) => {
           const errorCode = error.code;

@@ -20,6 +20,7 @@ const userSlice = createSlice({
       localStorage.setItem("currentUser", JSON.stringify(action.payload));
     },
     signOutSuccess(state) {
+      
       state.currentUser = null;
       state.loading = false;
       state.error = null;
